@@ -1,20 +1,41 @@
 import 'package:flutter/material.dart';
+// Importa tus pantallas aquí
+import 'screens/splash_screen.dart';
+import 'screens/home_screen.dart';
+// import 'screens/ejercicio_form.dart';
 
 void main() {
-  runApp(const MainApp());
+  runApp(const MyApp());
 }
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false, // OBLIGATORIO: Quitar etiqueta debug
+      title: 'Examen Flutter',
+      // TEMA PERSONALIZADO
+      theme: ThemeData(
+        useMaterial3: true,
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Colors.indigo,
+        ), // Cambia el color base aquí
+        scaffoldBackgroundColor: Colors.white,
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Colors.indigo,
+          foregroundColor: Colors.white,
+          centerTitle: true,
         ),
       ),
+      // RUTAS NOMBRADAS
+      initialRoute: '/splash',
+      routes: {
+        '/splash': (context) => const SplashScreen(),
+        '/home': (context) => const HomeScreen(),
+        // '/form': (context) => const EjercicioForm(), // Añade aquí tus ejercicios
+      },
     );
   }
 }
