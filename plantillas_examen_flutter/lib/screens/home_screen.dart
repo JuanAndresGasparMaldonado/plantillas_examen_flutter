@@ -20,7 +20,7 @@ class HomeScreen extends StatelessWidget {
               const Text("Bienvenido al Examen", style: TextStyle(fontSize: 22)),
               const SizedBox(height: 20),
               // Aquí va el contenido de tu ejercicio (imágenes, textos, filas, etc.)
-              Image.asset('assets/images/ejemplo.jpg', width: 200),
+              Image.asset('assets/images/cara.png', width: 200),
             ],
           ),
         ),

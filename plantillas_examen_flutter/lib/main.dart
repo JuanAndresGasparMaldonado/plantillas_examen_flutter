@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:plantillas_examen_flutter/screens/ejercicio_form.dart';
+import 'package:plantillas_examen_flutter/screens/perfil_screen.dart';
 // Importa tus pantallas aquí
 import 'screens/splash_screen.dart';
 import 'screens/home_screen.dart';
+import 'screens/contador_screen.dart';
+import 'screens/formulario_simple.dart';
 // import 'screens/ejercicio_form.dart';
 
 void main() {
@@ -34,7 +38,11 @@ class MyApp extends StatelessWidget {
       routes: {
         '/splash': (context) => const SplashScreen(),
         '/home': (context) => const HomeScreen(),
-        // '/form': (context) => const EjercicioForm(), // Añade aquí tus ejercicios
+        '/perfil' : (context) => const PerfilScreen(),
+        '/form': (context) => const FormularioScreen(),
+        '/contador' : (context) => const ContadorScreen(),
+        '/formulario' : (context) => const FormularioSimple()
+        // Añade aquí tus ejercicios
       },
     );
   }
